@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import NavBar         from './components/NavBar';
+import PriceLineChart from './components/PriceLineChart';
+import PriceBarChart  from './components/PriceBarChart';
+import PriceTable     from './components/PriceTable';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+
+      <div className="container">
+        {/* 折线图 */}
+        <PriceLineChart />
+
+        {/* 搜索表格 */}
+        <PriceTable />
+
+        {/* 柱状图 */}
+        <PriceBarChart />
+
+      </div>
+    </>
   );
 }
 
